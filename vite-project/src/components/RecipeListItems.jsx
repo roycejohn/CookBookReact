@@ -7,12 +7,12 @@ const RecipeListItems = () => {
     { id: '5gLUNcQhzLo97b91gvOrWL', title: 'Chorizo & Mozzarella Gnocchi' },
     { id: '3dgfSekgQbLukrTpwGhdC5', title: 'Hunters Chicken' },
     { id: '3Cz9iWTJH3bzYnIUIGH8yg', title: 'Homemade Pizza' },
-    { id: 'entry_id', title: 'Bucatini with Mushroom' },
+    { id: '1QKObDXJBHSeljXskdbs5I', title: 'Bucatini with Mushroom' },
    
   ];
 
   return (
-    <div className='recipe-page'>
+    <div className='recipe-page py-16'>
       <div className="recipe-list container mx-auto">
         <div className='title-recipe flex justify-center'>
           <h2 className="text-5xl font-bold mb-4">Recipe List</h2>
