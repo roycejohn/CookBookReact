@@ -8,6 +8,11 @@ const contentfulClient = createClient({
   accessToken: import.meta.env.VITE_APP_CONTENTFUL_ACCESS_TOKEN,
 });
 
+// const contentfulClient = createClient({
+//   space: 'whowk467f5k2',
+//   accessToken: '8MeD8B_7dHwAm4qkguDooYp-ImERKwk6LJGC13IN0qg',
+// });
+
 const RecipeDetails = () => {
   const { id } = useParams();
   const [recipe, setRecipe] = useState(null);
