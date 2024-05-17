@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import { useState } from 'react';
 import RecipeDetails from './components/RecipeDetails';
 import RecipeList from './components/RecipeList';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
 
 
 function App() {
@@ -38,6 +38,6 @@ function App() {
   );
 }
 
-{documentToReactComponents(recipe.fields.instruction)}
+
 export default App
 

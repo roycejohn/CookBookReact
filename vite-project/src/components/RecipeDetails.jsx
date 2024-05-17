@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { createClient } from 'contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-
 const client = createClient({
   space: 'whowk467f5k2',
   accessToken: '8MeD8B_7dHwAm4qkguDooYp-ImERKwk6LJGC13IN0qg'
@@ -27,7 +26,10 @@ const RecipeDetails = () => {
           <img src={recipe.fields.recipeImage.fields.file.url} alt={recipe.fields.title} />
           <p>{recipe.fields.recipeDetails}</p>
           <div className='ingre'>
-             <p>{recipe.fields.ingredients}</p>
+             <p>{recipe.fields.ingredients}
+             {recipe.fields.instruction}</p>
+             <div>{documentToReactComponents(recipe.fields.instruction)} 
+             </div>
           </div>
         </div>
       ))}
@@ -35,5 +37,5 @@ const RecipeDetails = () => {
   );
 };
 
-{documentToReactComponents(recipe.fields.instruction)}
+
 export default RecipeDetails;

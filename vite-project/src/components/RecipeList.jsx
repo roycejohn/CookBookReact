@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { createClient } from 'contentful';
 import {useContentful } from 'react-contentful';
 import {Outlet} from 'react-router-dom';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import {}
+
 
 
 
@@ -40,6 +41,6 @@ const RecipeList = () => {
   );
 };
 
-{documentToReactComponents(recipe.fields.instruction)}
+
 
 export default RecipeList;
