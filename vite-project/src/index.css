@@ -56,5 +56,10 @@ nav {
   background-color: rgb(197, 235, 170);
 }
 
-
+.main-page-featured-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 

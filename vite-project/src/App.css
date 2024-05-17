@@ -41,8 +41,11 @@
 
 /* Recipe list container styling */
 .recipe-list {
-  
-  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  max-width: 1100px;
   width: 100%;
   padding: 2rem 2rem;
   background-color: #ffffff; 
@@ -69,3 +72,16 @@
   margin-bottom: 0.5rem;
   text-align: center;
 }
+
+.recipe-item {
+  width: calc(25% - 20px); /* Adjust width based on container width and margins */
+  margin-bottom: 20px;
+}
+
+.recipe-item img {
+  width: 100%;
+  height: auto;
+
+/* .image-of-food-on-main {
+  width: 500px;
+} */

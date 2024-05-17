@@ -108,11 +108,11 @@ function Footer() {
 
       <div className="flex flex-col justify-center items-center">  
         <div className="min-h-20 flex justify-center">  
-          <button className="basis-1/7 w-48 h-4 rounded-lg outline-2 p-0 mx-4 my-auto">
+          <button className="basis-1/7 w-50 h-4 rounded-lg outline-2 p-0 mx-3 my-5">
             {/* <img src="./assets/appstore.png" alt="App Store"/> */}
             <img className='h-10 pb-1' src={appstore} alt="App Store"/>
           </button>
-          <button className="basis-1/7 w-48 h-4 rounded-lg outline-2 p-0 mx-4 my-auto">
+          <button className="basis-1/7 w-50 h-4 rounded-lg outline-2 p-0 mx-3 my-5">
             {/* <img src="./assets.googleplay.png" alt="Google Play"/> */}
             <img className='h-10 pb-1' src={googleplay} alt="Google Play"/>
           </button>

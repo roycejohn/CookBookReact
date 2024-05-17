@@ -17,11 +17,14 @@ function App() {
     <>
       <Header />
       {isHomePage && <Hero />}
+      <div className="main-page-featured-section">
+      <div className="text-xl md:text-4xl font-bold my-6">Featured Recipes</div>
       <Routes>
         <Route path="/" element={<RecipeList />} /> 
         <Route path="/recipes" element={<RecipeListItems />} /> 
         <Route path="/recipes/:id" element={<RecipeDetails />} />
       </Routes>
+      </div>
       <Footer />
     </>
      

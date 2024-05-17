@@ -26,24 +26,23 @@ const RecipeList = () => {
   }, []);
 
   return (
-    <div className="grid gap-10 mb-8 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="recipe-list my-5">
       {recipes.map(recipe => (
-        <div key={recipe.sys.id}>
-          <h2>{recipe.fields.title}</h2>
-            {recipe.fields.recipeImage && recipe.fields.recipeImage.fields && (
-            <img src={recipe.fields.recipeImage.fields.file.url} alt={recipe.fields.title} />
-            )}
+        <div className="recipe-item" key={recipe.sys.id}>
+          <h3 className="my-2 h-20">{recipe.fields.title}</h3>
+          {/* <div class="flex items-center"><h3 className="my-2 h-20">{recipe.fields.title}</h3> </div> */}
+          {recipe.fields.recipeImage && recipe.fields.recipeImage.fields && (
+            <img src={recipe.fields.recipeImage.fields.file.url} alt={recipe.fields.title} className="rounded-md mb-4"/>
+          )}
           <p>{recipe.fields.recipeDetails}</p>
-          <div className='ingre'>
-             <p>{recipe.fields.ingredients}</p>
+          <div className='ingredients'>
+             {/* <p>{recipe.fields.ingredients}</p> */}
           </div>
         </div>
       ))}
     </div>
   );
 };
-
-
 
 export default RecipeList;
 
