@@ -60,7 +60,7 @@ import googleplay from '../assets/googleplay.png';
 
 function Footer() {
   return (
-    <footer className ="bg-black text-white px-8" id="footerbackground">
+    <footer className ="bg-black text-white px-8 " id="footerbackground">
       <div className="grid gap-10 mb-8 sm:grid-cols-3 lg:grid-cols-5">
         <div className="footer-about text-base sm:col-span-2">
           <h4 className="text-2xl py-4">About Us</h4>
