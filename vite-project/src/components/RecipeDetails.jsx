@@ -17,6 +17,7 @@ const RecipeDetails = () => {
   useEffect(() => {
     contentfulClient.getEntry(id)
       .then((response) => {
+        console.log(response);
         setRecipe(response);
         setLoading(false);
       })
@@ -63,7 +64,9 @@ const RecipeDetails = () => {
               </div>
               <div className="ingre mb-4">
                 <h3 className="text-xl font-semibold mb-2">Ingredients:</h3>
-                {recipe.fields.ingredients1}
+                {recipe.fields.ingredients.map((ingredient, index) => (
+                   <li key={index}>{ingredient}</li>
+                ))}
               </div>
               <div className="mb-4">
                 <h3 className="text-xl font-semibold mb-2">Instructions:</h3>
