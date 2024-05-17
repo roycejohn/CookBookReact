@@ -18,6 +18,8 @@ function App() {
     <>
       <Header />
       {isHomePage && <Hero />}
+      <div className="main-page-featured-section">
+      <div className="featured-recipes-title text-xl md:text-4xl font-bold my-6">Featured Recipes</div> </div>
       <Routes>
         <Route path="/" element={<RecipeList />} /> 
         <Route path="/recipes" element={<RecipeListItems />} /> 

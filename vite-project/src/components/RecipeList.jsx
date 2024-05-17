@@ -26,17 +26,17 @@ const RecipeList = () => {
   }, []);
 
   return (
-    <div className="grid gap-10 mb-8 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="recipe-list grid gap-10 mb-8 sm:grid-cols-2 lg:grid-cols-2">
       {recipes.map(recipe => (
         <div key={recipe.sys.id}>
-          <h2>{recipe.fields.title}</h2>
+          <h3 className="my-1 h-8 text-xl">{recipe.fields.title}</h3>
             {recipe.fields.recipeImage && recipe.fields.recipeImage.fields && (
             <img src={recipe.fields.recipeImage.fields.file.url} alt={recipe.fields.title} />
             )}
           <p>{recipe.fields.recipeDetails}</p>
-          <div className='ingre'>
-             <p>{recipe.fields.ingredients}</p>
-          </div>
+          {/* <div className='ingre'>
+             <p>{recipe.fields.ingredients}</p> */}
+          {/* </div> */}
         </div>
       ))}
     </div>
