@@ -42,12 +42,14 @@
 /* Recipe list container styling */
 .recipe-list {
   
-  max-width: 900px;
+  max-width: 1300px;
   width: 100%;
   padding: 2rem 2rem;
   background-color: #ffffff; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   border-radius: 8px;
+  margin: auto;
+  margin-bottom: 1.5em;
 }
 
 .recipe-list li {
@@ -69,3 +71,11 @@
   margin-bottom: 0.5rem;
   text-align: center;
 }
+
+
+.main-page-featured-section .featured-recipes-title {
+text-align: center;
+}
+
+/* .footer-grid-section{
+} */

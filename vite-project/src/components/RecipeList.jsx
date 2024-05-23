@@ -26,26 +26,31 @@ const RecipeList = () => {
   }, []);
 
   return (
-    <div className="grid gap-10 mb-8 sm:grid-cols-2 lg:grid-cols-4">
-      {recipes.map(recipe => (
-        <div key={recipe.sys.id}>
-          <div className=''>
-            <h2>{recipe.fields.title}</h2>
+    <>
+      <div className="main-page-featured-section">
+          <div className="featured-recipes-title text-xl md:text-4xl font-bold my-6">
+            Featured Recipes
           </div>
-          <div className=''>
-            {recipe.fields.recipeImage && recipe.fields.recipeImage.fields && (
-              <img src={recipe.fields.recipeImage.fields.file.url} alt={recipe.fields.title} />
-            )}
+      </div>
+      <div className="recipe-list grid gap-10 mb-8 sm:grid-cols-2 lg:grid-cols-2">
+        {recipes.map(recipe => (
+          <div key={recipe.sys.id}>
+            <div className=''>
+            <h3 className="my-1 h-8 text-xl">{recipe.fields.title}</h3>
+              {recipe.fields.recipeImage && recipe.fields.recipeImage.fields && (
+                <img src={recipe.fields.recipeImage.fields.file.url} alt={recipe.fields.title} />
+              )}
+            </div>
+            <div className=''>
+              {recipe.fields.recipeDetails}
+            </div>
+            {/* <div className=''>
+              <p>{recipe.fields.ingredients}</p> */}
+            {/* </div> */}
           </div>
-          <div className=''>
-            {recipe.fields.recipeDetails}
-          </div>
-          <div className=''>
-             <p>{recipe.fields.ingredients}</p>
-          </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 };
 
